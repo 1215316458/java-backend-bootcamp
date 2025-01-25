@@ -21,6 +21,29 @@ Details: 2020 Toyota Camry
 public class ClassesAndObjects {
 
     public static void main(String[] args) {
+        Car c = new Car("TATA", "Nexon", "2021");
+        System.out.println(c.toString());
+    }
+}
 
+class Car {
+    String make;
+    String model;
+    String year;
+
+    public Car(String make, String model, String year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    @Override
+    public String toString() {
+        return "..." + '\n' +
+                "Make: " + make + '\n' +
+                "Model: " + model + '\n' +
+                "Year: " + year + '\n' +
+                "Details: " + year +" "+ make +" "+ model + '\n' +
+                "...";
     }
 }
